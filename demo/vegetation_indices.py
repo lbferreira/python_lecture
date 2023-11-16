@@ -1,3 +1,4 @@
+from typing import Callable, List
 import numpy as np
 from raster_dataset import RasterDataset
 
@@ -17,7 +18,9 @@ def calculate_evi(raster: RasterDataset) -> np.ndarray:
     return 2.5 * (nir_band - red_band) / (nir_band + 6 * red_band - 7.5 * blue_band + 1)
 
 
-def apply_vi_fns(raster: RasterDataset, fns: list[callable]) -> list[np.ndarray]:
+def apply_vi_fns(
+    raster: RasterDataset, fns: List[Callable[[RasterDataset], np.ndarray]]
+) -> List[np.ndarray]:
     """Apply a list of vegetation index functions to a raster."""
     results = []
     for fn in fns:
