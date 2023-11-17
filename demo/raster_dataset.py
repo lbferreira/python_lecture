@@ -41,11 +41,13 @@ class RasterDataset:
             transform = src.transform
             nodata = src.nodata
         return RasterDataset(data, crs, transform, band_names, nodata)
-    
+
     def get_band_data(self, band_name: str) -> np.ndarray:
         """Returns the data for the specified band."""
+        # Here we could implement some logic to check if the requested band
+        # is available. If not, we could raise an exception.
         return self.data[self._get_band_index(band_name)]
-    
+
     def _get_band_index(self, band_name: str) -> int:
         """Returns the index of the specified band."""
         return self.band_names.index(band_name)
@@ -66,4 +68,3 @@ class RasterDataset:
         ) as dst:
             dst.write(self.data)
             dst.descriptions = tuple(self.band_names)
-

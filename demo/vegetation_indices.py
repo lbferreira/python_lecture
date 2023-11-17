@@ -6,6 +6,10 @@ from raster_dataset import RasterDataset
 
 def calculate_ndvi(raster: RasterDataset) -> np.ndarray:
     """Compute the Normalized Difference Vegetation Index (NDVI) based on the red and near-infrared bands."""
+    # NOTE: it's not a good practice to write the band names in the code (hard-coded).
+    # To make it better we could, for example, store the band names for all band types in a configuration file.
+    # In this case, in this function we could only get the name of the red and near-infrared bands.
+    # In this way, this function doesn't need to know the actual band names.
     nir_band = raster.get_band_data("B08")
     red_band = raster.get_band_data("B04")
     return (nir_band - red_band) / (nir_band + red_band)
@@ -13,6 +17,10 @@ def calculate_ndvi(raster: RasterDataset) -> np.ndarray:
 
 def calculate_evi(raster: RasterDataset) -> np.ndarray:
     """Compute the Enhanced Vegetation Index (EVI) based on the blue, red and near-infrared bands."""
+    # NOTE: it's not a good practice to write the band names in the code (hard-coded).
+    # To make it better we could, for example, store the band names for all band types in a configuration file.
+    # In this case, in this function we could only get the name of the red and near-infrared bands.
+    # In this way, this function doesn't need to know the actual band names.
     nir_band = raster.get_band_data("B08")
     red_band = raster.get_band_data("B04")
     blue_band = raster.get_band_data("B02")
