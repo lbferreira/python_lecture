@@ -1,6 +1,6 @@
 # Hints for developing a sound Python project
 
-This material was created for a short Python lecture offered in the Geospatial Computing for Environmental Research (GCER) Lab at the Mississippi State University on November 2023. The goal of this lecture is to provide some hints for developing a sound Python project. The material is divided in two parts: a brief presentation and a code example. The presentation offers some hints for developing a sound Python project. The code example is a practical coding example that shows how to apply some of the hints presented in the presentation. The code example is provided in the [demo folder](demo/). A description of the code example is provided below.
+This material was created for a short Python lecture offered in the Geospatial Computing for Environmental Research (GCER) Lab at the Mississippi State University on November 2023. The goal of this lecture is to provide some hints for developing a sound Python project. The material is divided in two parts: a brief presentation and a code example. The [presentation](Hints%20for%20developing%20a%20Python%20project.pdf) offers some hints for developing a sound Python project. The code example is a practical example that shows how to apply some of the hints showed in the presentation. The code is provided in the [demo folder](demo/). A complete description of the coding task is provided below.
 
 ## Presentation
 - A brief presentation offering some hints for developing a sound Python project is provided [here](Hints%20for%20developing%20a%20Python%20project.pdf).
